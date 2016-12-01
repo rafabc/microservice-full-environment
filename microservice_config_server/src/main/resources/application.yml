@@ -5,9 +5,9 @@ spring:
         native:
           search-locations: classpath:/config
         git:
-          uri: https://github.com/rafabc/microservice-cloud-config
+          uri: https://github.com/rafabc/microservice-full-environment/tree/master/microservice_config_server/src/main/resources/config
   profiles:
-     active: native
+     active: git
   application:
     name: config-server
 

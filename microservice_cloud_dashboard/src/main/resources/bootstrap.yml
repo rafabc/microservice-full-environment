@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: cloud-dashboard
+    
+server:
+  port: 4444
+  
+  
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:2222/eureka/}
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5   
+  
+      
+#  cloud:
+#    config:
+#      uri: http://localhost:1111
+#      fail-fast: true
+#      password: rafabc
+#      username: user

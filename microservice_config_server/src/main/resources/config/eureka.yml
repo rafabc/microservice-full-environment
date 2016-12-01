@@ -4,6 +4,8 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
+    statusPageUrlPath: ${management.contextPath}/info
+    healthCheckUrlPath: ${management.contextPath}/health
   client:
     registerWithEureka: false
     fetchRegistry: false
