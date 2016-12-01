@@ -1,24 +1,22 @@
-package com.micro.admin;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-import de.codecentric.boot.admin.config.EnableAdminServer;
+
 
 @SpringBootApplication
-@EnableDiscoveryClient
-@EnableAdminServer
 @EnableAutoConfiguration
+@EnableConfigServer
+@EnableEurekaClient
 @RefreshScope
-public class AdminDashboardApp {
+public class ConfigServerApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdminDashboardApp.class, args);
+		SpringApplication.run(ConfigServerApp.class, args);
 	}
-	
-	
-	
 }

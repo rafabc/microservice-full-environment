@@ -1,3 +1,9 @@
 spring:
   application:
-    name: zuul-gateway
+    name: zuul
+  cloud:
+    config:
+      uri: http://localhost:1111
+      fail-fast: true
+      password: rafabc
+      username: user

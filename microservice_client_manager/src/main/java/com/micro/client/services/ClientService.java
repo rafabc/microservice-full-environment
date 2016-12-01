@@ -42,7 +42,7 @@ public class ClientService {
         
 		
     	ResponseEntity<Car> response = null;
-    	
+    	/*
 		for (int i=0; i<100; i++){
 			
 	    	System.out.println("instance uri: " + instance.getUri()); 
@@ -53,13 +53,21 @@ public class ClientService {
 			
 			response = template.exchange(SERVICE_CAR_URL, HttpMethod.GET, null, new ParameterizedTypeReference<Car>() {}, id);
 		}
+		*/
+		
+		response = template.exchange(SERVICE_CAR_URL, HttpMethod.GET, null, new ParameterizedTypeReference<Car>() {}, id);
 
 		return response.getBody();
 		
 	}
     
     public Car defaultCar(String e) {
-        return new Car("default car","2","3","4");
+        //return new Car("default car","2","3","4");
+        
+    	ResponseEntity<Car> response = null;
+        response = template.exchange(SERVICE_CAR_URL, HttpMethod.GET, null, new ParameterizedTypeReference<Car>() {}, 5);
+
+		return response.getBody();
     	
     }
     

@@ -47,6 +47,8 @@ public class CarController {
 	public Car defaultCarById(String id) {
 
 		PortListener portListener = new PortListener();
+		
+		System.out.println("puerto consumido: " + getPort());
 
 		return new Car(id, String.valueOf(portListener.getPort()), getPort(), "def", "def", "def");
 	}
