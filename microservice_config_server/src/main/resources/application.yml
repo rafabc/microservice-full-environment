@@ -1,13 +1,15 @@
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: classpath:/config
-#        git:
-#          uri: https://github.com/rafabc/microservice-full-environment/tree/master/microservice_config_server/src/main/resources/config
-#  profiles:
-#     active: git
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+        git:
+          uri: https://github.com/rafabc/microservice-full-environment
+          default-label: master
+          search-paths: microservice_config_server/src/main/resources/config
+  profiles:
+     active: git
 #security:
 #  user: 
 #    password: rafabc
@@ -15,9 +17,3 @@
 
 
 
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/rafabc/microservice-full-environment
