@@ -3,7 +3,7 @@ server:
     
 eureka:
   instance:
-    hostname: ${vcap.application.uris[0]}
+    hostname: localhost
     prefer-ip-address: true
     statusPageUrlPath: ${management.contextPath}/info
     healthCheckUrlPath: ${management.contextPath}/health
