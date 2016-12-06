@@ -1,7 +1,7 @@
 
 # HTTP Server
 server:
-  port: ${vcap.application.port:0}   # HTTP (Tomcat) port random
+  port: 0   # HTTP (Tomcat) port random
 
 
     
