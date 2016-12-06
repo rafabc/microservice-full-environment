@@ -10,10 +10,5 @@ spring:
           search-paths: microservice_config_server/src/main/resources/config
   profiles:
      active: git
-#security:
-#  user: 
-#    password: rafabc
-#    name: user  
-
 
 

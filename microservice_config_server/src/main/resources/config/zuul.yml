@@ -5,7 +5,7 @@ server:
 zuul:
   routes:
     car-service:
-      path: /car-serv/**
+      path: /car-service/**
       serviceId: car-service
     get:
       path: /car-serv2/**
