@@ -10,10 +10,13 @@ eureka:
     metadataMap:
       instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
+    serviceUrl:
+      defaultZone: http://localhost:2222/eureka/
     registerWithEureka: false
     fetchRegistry: false
   server:
-    waitTimeInMsWhenSyncEmpty: 0     
+    waitTimeInMsWhenSyncEmpty: 0   
+    
     
 
 #spring.boot.admin.url: http://localhost:3333               
